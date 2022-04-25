@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width:300px;
+    height:470px;
+    background-color: #3D3A38;
+    border-radius: 7px;
+    box-shadow: 1px 0px 12px -3px #000000;
+    padding:8px;
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+.display{
+    width:300px;
+    height:70px;
+    background-color: #7C7FB8;
+    color:white;
+    display: flex;
+    justify-content: end;
+    align-items:center;
+    font-size: 35px;
+    padding:7px;
+    box-shadow: 1px 0px 12px -3px #000000;
+}
+
+.grill {
+    width:300px;
+    height:300px;
+    left:5px;
+    position: absolute;
+    top:100px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+    
+}
+
+.button {
+    width:70px;
+    height: 70px;
+    background-color: #8C8C9A;
+    border-radius:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 40px;
+    box-shadow: 1px 0px 12px -3px #000000;
+    cursor:pointer;
+    
+}
+
+.button:hover {
+    opacity:.85;
+}
+
+.button:active {
+	background-color:#bebed4;
+}
+
+.clearequal {
+    width:300px;
+    height:100px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr ;
+    position: absolute;
+    padding:5px;
+    top: 288px;
+}
+
+.clear {
+	background-color:#0BA434;
+}
+
+.clear:active {
+	background-color:#21cf50;
+}
+
+.equal {
+	background-color:#D02F08;
+}
+
+.equal:active {
+	background-color:#e65f3e;
+}
+
+.buttonce {
+    width:144px;
+    height: 70px;
+    
+}
+
+.operator {
+    color:#D7D8C6;
+}
+
+.del {
+    color:#D7D8C6;
+	font-size:28px;
+}
+
+.label {
+    width:295px;
+    height:20px;
+    left:5px;
+    position: absolute;
+    color:#E1EAEE;
+    top:-26px;
+    font-size: 20px;
+    text-align: end;
+    
+    
+}

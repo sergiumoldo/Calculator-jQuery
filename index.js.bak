@@ -1,0 +1,183 @@
+//number buttons
+
+const number = document.getElementsByClassName("number");
+
+for(var i=0; i<number.length; i++){
+    
+    number[i].addEventListener('click', onDisplay); 
+    const num = number[i].innerHTML;
+    
+     
+function onDisplay(){
+       
+    const zero = $( ".dh3" ).text(); 
+    
+    if(zero.charAt( 0 ) == "0"){
+        $( ".dh3" ).empty();
+        $( ".dh3" ).append(num);
+    }  
+    else {
+        $( ".dh3" ).append(num) ;
+    }
+    
+    }
+};
+
+//operator buttons
+
+$(".plus").click(function(){
+    
+    $( ".label" ).append($( ".dh3" ).text()); 
+    
+    const lastTwo = ($( ".label" ).text().slice(-2));
+        
+    if(lastTwo == "+ " || lastTwo == "- " || lastTwo == "* " || lastTwo == "/ " )
+	{
+        
+        const labelString = $( ".label" ).text();
+                
+        const finalString = labelString.slice(0, -3);
+        
+        $( ".label" ).empty();
+        $( ".label" ).append(finalString);
+        $( ".label" ).append(" + ");
+        
+    }
+	
+	else 
+	{
+       
+    $( ".label" ).append(" + ");
+    $( ".dh3" ).empty();
+    }
+   
+});
+
+
+$(".minus").click(function(){
+    
+    $( ".label" ).append($( ".dh3" ).text()); 
+    
+    const lastTwo = ($( ".label" ).text().slice(-2));
+        
+    if(lastTwo == "+ " || lastTwo == "- " || lastTwo == "* " || lastTwo == "/ " )
+	{
+        
+        const labelString = $( ".label" ).text();
+                
+        const finalString = labelString.slice(0, -3);
+        
+        $( ".label" ).empty();
+        $( ".label" ).append(finalString);
+        $( ".label" ).append(" - ");
+        
+    }
+	
+	else
+	{
+    
+    $( ".label" ).append(" - ");
+    $( ".dh3" ).empty();
+    
+    }
+});
+
+
+$(".multiplication").click(function(){
+    
+     $( ".label" ).append($( ".dh3" ).text()); 
+    
+    const lastTwo = ($( ".label" ).text().slice(-2));
+        
+    if(lastTwo == "+ " || lastTwo == "- " || lastTwo == "* " || lastTwo == "/ " )
+	{
+        
+        const labelString = $( ".label" ).text();
+                
+        const finalString = labelString.slice(0, -3);
+        
+        $( ".label" ).empty();
+        $( ".label" ).append(finalString);
+        $( ".label" ).append(" * ");
+        
+    }
+	
+	else 
+	{
+         
+    $( ".label" ).append(" * ");
+    $( ".dh3" ).empty();
+    
+    }
+});
+
+
+$(".divide").click(function(){
+    
+    $( ".label" ).append($( ".dh3" ).text()); 
+    
+    const lastTwo = ($( ".label" ).text().slice(-2));
+        
+    if(lastTwo == "+ " || lastTwo == "- " || lastTwo == "* " || lastTwo == "/ " )
+	{
+        
+        const labelString = $( ".label" ).text();
+                
+        const finalString = labelString.slice(0, -3);
+        
+        $( ".label" ).empty();
+        $( ".label" ).append(finalString);
+        $( ".label" ).append(" / ");
+        
+    }
+	
+	else 
+	{
+    
+    $( ".label" ).append(" / ");
+    $( ".dh3" ).empty();
+    
+    }
+});
+
+//clear button
+
+$(".clear").click(function(){
+    $( ".label" ).empty();
+    $( ".dh3" ).empty();
+    $( ".dh3" ).append("0");
+    
+});
+
+//equal butoon
+
+$(".equal").click(function(){
+   
+    $( ".label" ).append($( ".dh3" ).text());
+    
+    $( ".dh3" ).empty();
+   
+    equal();
+    
+    
+    function equal(){   
+           
+    var result = $(".label").text();
+    $( ".dh3" ).append(eval(result));
+    $( ".label" ).empty();
+    }
+    
+});
+
+
+
+
+
+    
+   
+
+ 
+
+
+    
+    
